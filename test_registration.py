@@ -1,7 +1,9 @@
-
+import smtplib
 import time
 
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import sport_helper
@@ -74,3 +76,9 @@ def test_registr(driver):
                                                            "registration-verify-email/div[2]/div/div[2]/button")
     after_registration_windows.click()
 
+
+# вход на почтовый ящик и подтверждение регистрации
+
+#    driver.execute_script("window.open('www.gmail.com')")
+
+#    time.sleep(4)

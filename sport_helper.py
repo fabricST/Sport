@@ -3,7 +3,7 @@ import string
 
 
 def random_email():
-    email = "storchak.eugene+" + str(random.randint(1, 999)) + "@gmail.com"
+    email = "test.sport.ole+" + str(random.randint(1, 999)) + "@gmail.com"
     return email
 
 
