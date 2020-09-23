@@ -1,5 +1,6 @@
 from selenium.webdriver.support import expected_conditions as EC
-
+import imaplib
+import re
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -9,10 +10,13 @@ import time
 
 @pytest.fixture()
 def driver():
+    main_link = "https://dev.ole.bet/ru"
     dr = webdriver.Chrome("chromedriver")
     dr.maximize_window()
-    dr.get("https://dev.ole.bet/ru")
+    dr.get(main_link)
     return dr
+
+
 
 
 @pytest.fixture()
@@ -25,3 +29,6 @@ def log_in(driver):
     find_button_login = driver.find_element(By.CLASS_NAME, "login__button-wrapper").click()
     time.sleep(3)
     icon_balance = wait.until(EC.visibility_of_element_located((By.CLASS_NAME, "profile__link")))
+
+
+
