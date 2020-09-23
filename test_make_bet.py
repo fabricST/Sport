@@ -2,7 +2,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import sport_helper
+
 
 def test_make_bet(driver, log_in):
     wait = WebDriverWait(driver, 30)
