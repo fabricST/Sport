@@ -74,8 +74,8 @@ def test_registr(driver):
 
 
 # вход на почтовый ящик и подтверждение регистрации
-    a = sport_helper.click_on_email
+    a = sport_helper.click_on_email()
     driver.execute_script("window.open('');")
     driver.switch_to.window(driver.window_handles[1])
     driver.get(a)
-
+    time.sleep(3)

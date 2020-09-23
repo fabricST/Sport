@@ -44,5 +44,6 @@ def click_on_email():
         activation_link = re.sub('<[^>]*>|<|>', '', urls[0])
     # print(activation_link)
     activation_link1 = activation_link.replace('the', '')
-    # print("Link activation = ", activation_link1)
+#    print("Link activation = ", activation_link1)
+
     return activation_link1
